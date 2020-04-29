@@ -1,5 +1,6 @@
 :root {
   --c-primary: #e67e22;
+  --c-gray: #555555;
 }
 
 html {
@@ -24,8 +25,24 @@ img {
   max-width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--c-gray);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .mg-right-md {
   margin-right: 1rem;
+}
+
+.icon-big {
+  font-size: 6rem;
+  color: var(--c-primary);
 }
 
 .header {
@@ -115,5 +132,98 @@ img {
 
 .btn--transparent {
   color: var(--c-primary);
+}
+
+.section-intro {
+  width: 90%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.section-intro__heading {
+  font-size: 3.8rem;
+  text-align: center;
+  color: var(--c-gray);
+  padding-bottom: 2.4rem;
+  position: relative;
+}
+
+.section-intro__heading::after {
+  content: '';
+  width: 10rem;
+  height: 2px;
+  background-color: var(--c-primary);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.section-intro__para {
+  font-size: 2rem;
+  color: var(--c-gray);
+}
+
+.features {
+  padding: 8rem 0;
+}
+
+.features__tab__container {
+  display: -ms-grid;
+  display: grid;
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 4rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+}
+
+.features__tab__heading {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.features__tab__para {
+  color: var(--c-gray);
+}
+
+.meals {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.meals__item {
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
+}
+
+.meals__item:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.meals__item:hover .meals__item__img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.meals__item__img {
+  -webkit-transition: -webkit-transform .3s ease-in;
+  transition: -webkit-transform .3s ease-in;
+  transition: transform .3s ease-in;
+  transition: transform .3s ease-in, -webkit-transform .3s ease-in;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  position: relative;
+  z-index: -11;
 }
 /*# sourceMappingURL=style.css.map */
