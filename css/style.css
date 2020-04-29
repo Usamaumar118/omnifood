@@ -163,12 +163,21 @@ h6 {
   margin: 0 auto;
 }
 
+.section-intro--testimonials {
+  max-width: 90rem;
+}
+
 .section-intro__heading {
   font-size: 3.8rem;
   text-align: center;
   color: var(--c-gray);
-  padding-bottom: 2.4rem;
+  margin-top: 0;
   position: relative;
+}
+
+.section-intro__heading--testimonials {
+  color: #fff;
+  padding-bottom: 2.4rem;
 }
 
 .section-intro__heading::after {
@@ -363,5 +372,66 @@ h6 {
 .cities__tab__details__text--link {
   color: var(--c-primary);
   text-decoration: underline;
+}
+
+.testimonial {
+  padding: 8rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("/img/back-customers.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/img/back-customers.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.testimonial__tab__container {
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.testimonial__tab__text {
+  color: #fff;
+  font-size: 2.2rem;
+  font-style: italic;
+  position: relative;
+  padding-top: 5rem;
+}
+
+.testimonial__tab__text::before {
+  content: '\201C';
+  font-size: 9rem;
+  display: block;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+
+.testimonial__tab__customer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.testimonial__tab__customer__img {
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.testimonial__tab__customer__name {
+  font-style: 2.2rem;
+  color: #fff;
+  font-style: italic;
 }
 /*# sourceMappingURL=style.css.map */
