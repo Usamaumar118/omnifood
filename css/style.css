@@ -57,6 +57,17 @@ h6 {
   color: var(--c-primary);
 }
 
+.icon-small {
+  font-size: 2.5rem;
+  color: var(--c-primary);
+}
+
+.ion-social-twitter:hover {
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+  color: #00ACED;
+}
+
 .header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/img/hero.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/hero.jpg");
@@ -188,7 +199,7 @@ h6 {
   max-width: 120rem;
   margin: 0 auto;
   display: grid;
-  gap: 4rem;
+  gap: 3rem;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   padding: 2rem;
@@ -308,5 +319,49 @@ h6 {
 
 .app__download__text__img img {
   height: 100%;
+}
+
+.cities {
+  padding: 8rem 0;
+}
+
+.cities__tab__container {
+  width: 90%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 4rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.cities__tab__heading {
+  font-size: 2.2rem;
+  margin: 1rem 0 .8rem;
+}
+
+.cities__tab__details {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  color: var(--c-gray);
+  -ms-grid-columns: 12% 1fr;
+      grid-template-columns: 12% 1fr;
+}
+
+.cities__tab__details i {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-right: 1rem;
+}
+
+.cities__tab__details__text--link {
+  color: var(--c-primary);
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
