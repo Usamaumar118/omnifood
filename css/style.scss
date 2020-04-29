@@ -4,6 +4,10 @@
     --c-gray: #555555;
     --c-hover: #CF6D17;
     --c-border:#e8e8e8;
+    --c-border-dark:#d4d4d4;
+    --c-footer :#333333;
+
+
 }
 
 
@@ -563,4 +567,40 @@ h6{
     }
 
 
+}
+
+
+.signup{
+    padding: 8rem 0;
+
+
+        &__form{
+            width: 90%;
+            max-width: 70rem;
+            margin: 0 auto;
+            padding: 1rem 0;
+
+            &__input{
+                padding: .8rem;
+                border-radius: .3rem;
+                border: 1px solid var(--c-border-dark);
+
+                &--newsletter{
+                    margin-right: 1rem;
+                }
+            }
+            &__submit{
+                margin-left: 35%;
+                margin-top: 1rem;
+            }
+        }
+
+            .form-control {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 35% 1fr;
+                margin-bottom: 1.5rem;
+                font-size: 2rem;
+                color: var(--c-gray);
+            }
 }

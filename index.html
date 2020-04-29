@@ -392,30 +392,43 @@
         </div>
         
         <form action="/" class="signup__form">
+            <div class="form-control">
+                <label for="name" class="signup__form__label">Name</label>
+                <input required type="text" id="name" class="signup__form__name signup__form__input" placeholder="Your Name">
+            </div>
             
-            <label for="name" class="signup__form__label">Name</label>
-                <input type="text" id="name" class="signup__form__name signup__form__input" placeholder="Your Name">
             
+            <div class="form-control">
+                <label for="email" class="signup__form__label">Email</label>
+                <input required type="email" id="email" class="signup__form__email signup__form__input" placeholder="Your email">
+            </div>
 
-            <label for="email" class="signup__form__label">Email</label>
-                <input type="text" id="email" class="signup__form__email signup__form__input" placeholder="Your email">
-            
-
-            <label for="find-us" class="signup__form__label">How did you find us?</label>
-                <select name="find-us" id="find-us">
+            <div class="form-control">
+                <label for="find-us" class="signup__form__label">How did you find us?</label>
+                <select name="find-us" id="find-us" class="signup__form__input">
                     <option value="friends" selected>Friends</option>
                     <option value="search">Search engine</option>
                     <option value="ad">Advertisement</option>
                     <option value="other">Other</option>
                 </select>
+            </div>
 
+
+            <div class="form-control">
                 <label for="newsletter" class="signup__form__label">Newsletter?</label>
-                <input type="checkbox" id="newsletter" class="signup__form__newsletter signup__form__input">Yes Please
+                <div>
+                    <input type="checkbox" id="newsletter" class="signup__form__newsletter signup__form__input signup__form__input--newsletter">Yes, please 
+                </div>
+            </div>
+                        
 
-                <label for="text" class="signup__form__label">Drop a line</label>
-                <textarea name="text" id="text" cols="30" rows="10"></textarea>
+            <div class="form-control">
+                <label for="text" class="signup__form__label">Drop us a line</label>
+                <textarea placeholder="Your Message" class="signup__form__input" name="text" id="text" cols="10" rows="3"></textarea>
+            </div>
 
-                <input type="submit" class="btn btn--yellow" id="submit" value="Send It">
+                <input type="submit" class="btn btn--yellow signup__form__submit" id="submit" value="Send It">
+
             
         </form>
 
