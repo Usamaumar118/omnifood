@@ -2,8 +2,8 @@
     --c-primary: #e67e22;
     --c-primary-light: #f4f4f4;
     --c-gray: #555555;
-
-
+    --c-hover: #CF6D17;
+    --c-border:#e8e8e8;
 }
 
 
@@ -70,6 +70,7 @@ h6{
     font-size: 2.5rem;
     color: var(--c-primary);
 }
+
 
 .ion-social-twitter:hover{
     transition: color .3s ease-out;
@@ -152,18 +153,33 @@ h6{
 .btn{
     padding: 1rem 3.2rem;
     border-radius: 22rem;
-    //font-size: 1.8rem;
     display: inline-block;
-    border: 2px solid var(--c-primary);
+    border: 1px solid var(--c-primary);
+    transition: background-color .3s ease-in,
+                color .3s ease-in;
 
 
     &--yellow{
         background-color: var(--c-primary);
         color: #fff;
+
+        &:hover{
+            background-color: var(--c-hover);
+        }
     }
 
     &--transparent{
-        color: var(--c-primary)
+        color: var(--c-primary);
+
+        &:hover{
+            background-color: var(--c-hover);
+            color: #fff;
+        }
+    }
+
+    &--narrow{
+        padding: .6rem 2.6rem;
+        font-size: 2rem;
     }
 }
 
@@ -184,12 +200,12 @@ h6{
         font-size: 3.8rem;
         text-align: center;
         color: var(--c-gray);
+        padding-bottom: 2.4rem;
         margin-top: 0;
         position: relative;
 
         &--testimonials{
             color: #fff;
-            padding-bottom: 2.4rem;
         }
 
         &::after{
@@ -463,4 +479,88 @@ h6{
             }
         }
     }
+}
+
+
+
+.packages{
+    padding: 8rem 0;
+    background-color: var(--c-primary-light);
+
+
+    &__tab{
+
+        &__container{
+            width: 90%;
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 2rem;
+            font-size: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem
+        }
+
+        &__top{
+            background-color: #FCFCFC;
+            padding: 1rem;
+            border-top-left-radius: .3rem;
+            border-top-right-radius: .3em;
+
+        }
+        &__title{
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            color: var(--c-gray);
+            margin-bottom: .5rem;
+        }
+
+        &__price{
+            font-size: 2rem;
+            color: var(--c-primary);
+
+            &--bold{
+                font-size: 6rem;
+                margin-right: 1rem;
+            }
+        }
+
+        &__detail{
+            font-size: 1.6rem;
+            font-weight: 200;
+            color: var(--c-gray);
+        }
+
+        &__features{
+            background-color: #fff;
+            color: var(--c-gray);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-top: 1px solid var(--c-border);
+            border-bottom: 1px solid var(--c-border);
+
+
+            &__item{
+                &__icon{
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        &__btn{
+            padding: 1.5rem;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom-left-radius: .3rem;
+            border-bottom-right-radius: .3em;
+
+        }
+
+    }
+
+
 }
