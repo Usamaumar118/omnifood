@@ -1,0 +1,119 @@
+:root {
+  --c-primary: #e67e22;
+}
+
+html {
+  font-family: Arial, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.45;
+  font-size: 1.8rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mg-right-md {
+  margin-right: 1rem;
+}
+
+.header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/img/hero.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/hero.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header__content {
+  width: 90%;
+  max-width: 120rem;
+  height: 100vh;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: max-content 1fr;
+      grid-template-rows: -webkit-max-content 1fr;
+      grid-template-rows: max-content 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header__top {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__top__logo {
+  height: 10rem;
+}
+
+.header__top__logo--black {
+  display: none;
+}
+
+.header__top__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__top__nav__item {
+  color: #fff;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+
+.header__hero {
+  margin-bottom: 10%;
+}
+
+.header__hero__heading {
+  color: #fff;
+  font-size: 4.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.btn {
+  padding: 1rem 3.2rem;
+  border-radius: 22rem;
+  display: inline-block;
+  border: 2px solid var(--c-primary);
+}
+
+.btn--yellow {
+  background-color: var(--c-primary);
+  color: #fff;
+}
+
+.btn--transparent {
+  color: var(--c-primary);
+}
+/*# sourceMappingURL=style.css.map */
