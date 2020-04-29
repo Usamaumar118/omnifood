@@ -1,5 +1,6 @@
 :root{
     --c-primary: #e67e22;
+    --c-primary-light: #f4f4f4;
     --c-gray: #555555;
 
 
@@ -10,9 +11,18 @@
 // CHANGING DEFAULTS
 //////////////////////////
 
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 html{
     font-family:  Arial, sans-serif;
     font-size: 62.5%;
+    box-sizing: border-box;
 }
 
 body{
@@ -257,3 +267,88 @@ h6{
         }
     }
 }
+
+
+
+// ///////////////////////
+// APP SECTION
+//////////////////////////  
+
+.app{
+    padding: 8rem 0;
+    background-color: var(--c-primary-light);
+
+
+    &__download{
+        width: 90%;
+        max-width: 105rem;
+        margin: 0 auto;
+        padding: 4rem 0;
+        display: grid;
+        gap: 8rem;
+        grid-template-columns: repeat(2, 1fr);
+
+
+
+    
+        &__img{
+            height: 45rem;
+            justify-self: end;
+            & img{
+                height: 100%;
+            }
+        }
+
+        &__text{
+            padding-top: 3rem;
+
+            &__point{
+                display: flex;
+                align-items: center;
+                margin-bottom: 5rem;
+                font-size: 2rem;
+                color: var(--c-gray);
+                //border: 1px solid red;
+
+
+                &__number{
+                    padding: 2.5rem;
+                    line-height: 1;
+                    font-size: 3rem;
+                    color: var(--c-primary);
+                    margin-right: 2rem;
+                    border: 2px solid var(--c-primary);
+                    border-radius: 50%;
+                    position: relative;
+                
+                    &--text{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+
+            }
+
+            &__img{
+                height: 4rem;
+                margin-top: 8rem;
+
+                & img{
+                    height: 100%;
+                }
+                
+            }
+            // }
+
+
+        }
+
+
+    }
+}
+
+
+
