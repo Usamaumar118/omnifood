@@ -30,6 +30,24 @@ html{
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+
+    @media only screen and (min-width: 2200px){
+        font-size: 72.5%;;
+    }
+
+    @media only screen and (max-width: 1440px){
+        font-size: 60%;;
+    }
+    @media only screen and (max-width: 1250px){
+        font-size: 55%;
+    }
+    @media only screen and (max-width: 1000px){
+        font-size: 52%;
+    }
+    @media only screen and (max-width: 550px){
+        font-size: 48%;
+    }
 }
 
 body{
@@ -117,6 +135,7 @@ h6{
     &__top{
         padding: 2rem 0;
         display: flex;
+        align-items: center;
         justify-content: space-between;
 
         &__logo{
@@ -127,9 +146,22 @@ h6{
             }
         }
 
+        &__nav-icon{
+            display: none;
+            color: #fff;
+            font-size: 4rem;
+            @media only screen and (max-width: 600px){
+                display: block;
+            }
+        }
+
         &__nav{
             display: flex;
             align-items: center;
+
+            @media only screen and (max-width: 600px){
+                display: none;
+            }
 
             &__item{
                 color: #fff;
@@ -159,6 +191,15 @@ h6{
             text-transform: uppercase;
             letter-spacing: 2px;
             line-height: 1.2;
+
+            @media only screen and (max-width: 800px){
+                font-size: 4rem;
+            }
+            
+            @media only screen and (max-width: 650px){
+                font-size: 3.6rem;
+            }
+    
         }
 
 
@@ -227,8 +268,21 @@ h6{
         margin-top: 0;
         position: relative;
 
+        @media only screen and (max-width: 650px){
+            font-size: 3.2rem;
+        }
+        @media only screen and (max-width: 550px){
+            font-size: 2.6rem;
+        }
+
         &--testimonials{
             color: #fff;
+            @media only screen and (max-width: 650px){
+                font-size: 3rem;
+            }
+            @media only screen and (max-width: 550px){
+                font-size: 2.6rem;
+            }
         }
 
         &::after{
@@ -270,6 +324,14 @@ h6{
         display: grid;
         gap: 4rem;
         grid-template-columns: repeat(4, 1fr);
+
+        @media only screen and (max-width: 1150px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 550px){
+            grid-template-columns: 1fr;
+        }
         
         padding: 4rem 0;
     }
@@ -341,6 +403,9 @@ h6{
         display: grid;
         gap: 8rem;
         grid-template-columns: repeat(2, 1fr);
+        @media only screen and (max-width: 550px){
+            grid-template-columns: 1fr;
+        }
 
 
 
@@ -348,6 +413,11 @@ h6{
         &__img{
             height: 45rem;
             justify-self: end;
+
+            @media only screen and (max-width: 550px){
+                justify-self: center;
+            }
+
             & img{
                 height: 100%;
             }
@@ -389,6 +459,11 @@ h6{
                 height: 4rem;
                 margin-top: 8rem;
 
+                @media only screen and (max-width: 550px){
+                    text-align: center;
+                }
+    
+
                 & img{
                     height: 100%;
                 } 
@@ -414,6 +489,13 @@ h6{
             display: grid;
             gap: 4rem;
             grid-template-columns: repeat(4, 1fr);
+            @media only screen and (max-width: 1000px){
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media only screen and (max-width: 550px){
+                grid-template-columns: 1fr;
+            }
         }
 
         &__heading{
@@ -462,6 +544,11 @@ h6{
             padding: 2rem 0;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+
+            @media only screen and (max-width: 800px){
+                grid-template-columns: 1fr;
+    
+            }
             gap: 3rem;
         }
 
@@ -512,7 +599,6 @@ h6{
 
 
     &__tab{
-
         &__container{
             width: 90%;
             max-width: 120rem;
@@ -521,7 +607,10 @@ h6{
             font-size: 2rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 3rem
+            @media only screen and (max-width: 900px){
+                grid-template-columns: 1fr;
+            }
+            gap: 3rem;
         }
 
         &__top{
@@ -529,6 +618,8 @@ h6{
             padding: 1rem;
             border-top-left-radius: .3rem;
             border-top-right-radius: .3em;
+            max-width: 50rem;
+            margin: 0 auto;
 
         }
         &__title{
@@ -555,6 +646,8 @@ h6{
         }
 
         &__features{
+            max-width: 50rem;
+            margin: 0 auto;
             background-color: #fff;
             color: var(--c-gray);
             padding: 1rem;
@@ -573,6 +666,8 @@ h6{
         }
 
         &__btn{
+            max-width: 50rem;
+            margin: 0 auto;
             padding: 1.5rem;
             background-color: #fff;
             display: flex;
@@ -602,10 +697,15 @@ h6{
             &__input{
                 padding: .8rem;
                 border-radius: .3rem;
+                width: 100%;
                 border: 1px solid var(--c-border-dark);
+                @media only screen and (max-width: 550px){
+                    margin-top: 1rem;
+                }
 
                 &--newsletter{
                     margin-right: 1rem;
+                    width: auto;
                 }
             }
 
@@ -626,6 +726,9 @@ h6{
                 margin-bottom: 1.5rem;
                 font-size: 2rem;
                 color: var(--c-gray);
+                @media only screen and (max-width: 550px){
+                    grid-template-columns: 1fr;
+                }
             }
 }
 
@@ -645,16 +748,27 @@ h6{
     &__nav{
 
         display: flex;
+
+        @media only screen and (max-width: 550px){
+            margin-bottom: 2rem;
+        }
         &__container{
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 4rem;
+            @media only screen and (max-width: 550px){
+                flex-direction: column;
+            }
         }
 
         &__item{
             color: var(--c-footer-text);
             margin-right: 2rem;
+
+            &--last{
+                margin-right: 0;
+            }
         }
     }
 
